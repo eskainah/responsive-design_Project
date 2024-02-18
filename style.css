@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700');
+@import url('https://fonts.googleapis.com/css2?family=Roboto');
+
+:root{
+    --accent-primary: #2E323F;
+    --accent-secondary: #3B4050;
+    --accent-light: #6F737F;
+    --accent-text-light: #ffffffc9;
+    --accent-brown: #A59678;
+}
+
+*, ::before, ::after{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Oswald", "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    margin: 0;
+}
+.container{
+    width: 90%;
+    margin: 0 auto;
+}
+
+header{
+    background-color: var(--accent-secondary);
+    margin-top: 0;
+}
+nav{
+    background-color: var(--accent-primary);
+    margin-top: 0;
+}
+.btn{
+    background-color: var(--accent-brown);
+    color: var(--accent-text-light);
+    border: none;
+    border-radius: 20px;
+    font-family: "Oswald", sans-serif;
+}
+/* nav section starts here */
+.nav{
+    display: flex;
+    flex-direction: column;
+    font-size: clamp(.5rem, calc(.3rem + 3vw), 1.125rem);
+    color: var(--accent-text-light);
+}
+.link{
+    width: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-weight: 500;
+    li{
+        list-style: none;
+        text-align: center;
+        padding: 5px;
+        width: 100%;
+        text-transform: uppercase;
+    }
+    .btn{
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: clamp(.3rem, calc(.1rem + 4vw), 1.125rem);
+        padding: 5px;
+        width: 50%;
+        margin-bottom: 15px;
+    }
+}
+.logo{
+    width: 100%;
+    padding: 5px;
+    img{
+        width: 12%;
+       margin-top: 15px;
+    }
+}
+/* Hero section starts here */
+.hero{
+    padding: 25px;
+    .btn{
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: clamp(.5rem, calc(.2rem + 3vw), 1.5rem);
+        padding: 8px;
+    }
+}
+.hero-header{
+    margin: 0;
+    text-align: center;
+    font-weight: bold;
+    color: var(--accent-text-light);
+    font-size: clamp(1rem, calc(.8rem + 4vw), 6rem);
+    span{
+        color: var(--accent-brown);
+    }
+}
+.hero-text{
+    font-family: roboto;
+    font-size: clamp(.5rem, calc(.2rem + 4vw), 1.5rem);
+    color: var(--accent-text-light);
+    margin: 0 auto;
+}
+main{
+    p{
+        font-family: Roboto;
+        font-size: clamp(.3rem, calc(.15rem + 4vw), 1.5rem);
+    }
+}
+.services{
+    background-color: rgba(224, 217, 217, 0.281);
+    padding: 1px 0 20px 0;
+    h2{
+        font-family: Oswald;
+        font-size: clamp(.5rem, calc(.3rem + 5vw), 1.875rem);
+        color: var(--accent-brown);
+        margin: 10px 0 10px 0;
+    }
+    p{ 
+        margin-bottom: 0PX;
+    }
+}
+
+.detail-info{
+    padding: 1px 0 20px 0;
+    h3{
+        font-size: clamp(.5rem, calc(.4rem + 5vw), 2.25rem);
+        margin: 5px 0 5px 0;
+        color: var(--accent-brown);
+    }
+    img{
+        width: 100%;
+    }
+}
+
+.sidebar{
+    padding: 1px 0 25px ;
+    color: var(--accent-text-light);
+    h3{
+        font-size: clamp(.3rem, calc(.4rem + 4vw), 1.875rem);
+        margin: 5px 0 5px 0;
+    }
+    article{
+        background-color: var(--accent-secondary);
+        text-align: center;
+        padding: 10px;
+        margin-top: 15px;
+        p{
+            padding: 0 10px;
+        }
+    }
+}
+footer{
+    background-color: var(--accent-secondary); 
+    padding: 10px;
+}
