@@ -22,16 +22,22 @@ body{
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
+    /* added for nav-toggle positioning */
+    position: relative;
 }
 
 header{
     background-color: var(--accent-secondary);
     margin-top: 0;
 }
-nav{
+
+.header{
     background-color: var(--accent-primary);
     margin-top: 0;
+    padding: 1em 0;
+    text-align: center;
 }
+
 .btn{
     background-color: var(--accent-brown);
     color: var(--accent-text-light);
@@ -39,43 +45,115 @@ nav{
     font-family: "Oswald", sans-serif;
     text-transform: uppercase;
     font-weight: 600;
-    border-radius: 20px;
+    display: inline-block;
+    padding: .75em 2em;
+    border-radius: 100px;
+}
+
+.btn:hover,
+.btn:focus {
+    opacity: .75; 
 }
 /* nav section starts here */
-.nav{
-    display: flex;
-    flex-direction: column;
-    font-size: clamp(.5rem, calc(.3rem + 3vw), 1.125rem);
-    color: var(--accent-text-light);
-}
-.link{
+.nav {
     width: 100%;
+    font-size: 1rem;
+}
+.nav__list{
     list-style: none;
     margin: 0;
     padding: 0;
-    font-weight: 500;
-    li{
-        list-style: none;
-        text-align: center;
-        padding: 5px;
-        width: 100%;
-        text-transform: uppercase;
-    }
-    .btn{
-        font-size: clamp(.3rem, calc(.1rem + 4vw), 1.125rem);
-        padding:  5px;
-        width: 160px;
-        margin-bottom: 15px;
-    }
 }
-.logo{
+.nav__item{
+    margin-top: .75em;
+}
+.nav__list li{
+    text-align: center;  
+    
+}
+.nav__link{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #FFF;
+}
+
+.nav__link:hover, 
+.nav__link:focus{
+    opacity: .65;
+}
+
+.nav__list--primary{
+    margin-bottom: 2em;
+}
+.nav__link--button{
+    padding: .25em .75em;
+    border-radius: 100px;
+    background-color: #fff;
+    color: #23424A;
+}
+.nav-toggle {
+    cursor: pointer;
+    border: 0;
+    width: 3em;
+    height: 3em;
+    padding: 0em;
+    border-radius: 50%;
+    background: var(--accent-brown);
+    color: white;
+    transition: opacity 250ms ease;
+    
+    position: absolute;
+    left: 0;
+}
+
+.nav-toggle:focus,
+.nav-toggle:hover {
+    opacity: .75;
+}
+
+.hamburger {
+    width: 50%;
+    position: relative;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+    display: block;
+    margin: 0 auto;
+    height: 3px;
+    background: white;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: '';
     width: 100%;
-    padding: 5px;
-    img{
-        width: 12%;
-       margin-top: 15px;
-    }
 }
+
+.hamburger::before {
+    transform: translateY(-6px);
+}
+
+.hamburger::after {
+    transform: translateY(3px);
+}
+
+.nav {
+    visibility: hidden;
+    height: 0;
+    position: absolute;
+}
+
+.nav--visible {
+    visibility: visible;
+    height: auto;
+    position: relative;
+} 
+
+.logo{
+    height: 30px;
+} 
 /* Hero section starts here */
 .hero{
     padding: 25px;
@@ -185,6 +263,32 @@ footer{
 }
 
 @media (min-width: 960px) {
+    .nav-toggle {
+        display: none;
+    }
+
+    .nav {
+        visibility: visible;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        height: auto;
+        position: relative;
+    }
+
+    .nav__list{
+        display: flex;
+        margin: 0;
+    }
+
+    .nav__item{
+        margin: 0 0 0 1em;
+    }
+
+    .row {
+        display: flex;
+        justify-content: space-between;
+    }
    .sidebar-grid{
         display: flex;
         flex-direction: row;
@@ -195,34 +299,7 @@ footer{
     }
 }
 @media (min-width: 1200px) {
-    .nav{   
-        display: flex;
-        flex-direction: row;
-        background-color: hsl(200, 25%, 5%);
-        font-size: 1.2rem;
-        color: var(--accent-text-light);
-    }   
-    .link{
-        display: flex;
-        flex-direction: row;
-        padding: 10px 0 0 0;
-        font-weight: 500;
-        li{
-            padding: 1px;
-        }
-        .btn{
-            width: 130px;
-            font-size: 1.2rem;
-            padding-top: 3px;
-        }
-    }
-    .logo{
-        padding: 5px;
-        img{
-            width: 12%;
-            margin-top: 5px;
-        }
-    }
+    
     .hero{
         display: flex;
         flex-direction: row;
