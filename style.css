@@ -2,11 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto');
 
 :root{
-    --accent-primary: #2E323F;
-    --accent-secondary: #3B4050;
+    --accent-primary: #090d0f;
+    --accent-secondary: #091114f1;
     --accent-light: #6F737F;
     --accent-text-light: #ffffffc9;
-    --accent-brown: #A59678;
+    --accent-brown: #556334;
 }
 
 *, ::before, ::after{
@@ -151,6 +151,37 @@ main{
     }
 }
 footer{
-    background-color: var(--accent-secondary); 
+    background-color: var(--accent-primary); 
     padding: 10px;
+    color: var(--accent-text-light);
+    ul li{
+        list-style: none;
+        background-color: #090d0f;
+    }
+    ul{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    h2, h4{
+        color: var(--accent-brown);
+    }
+    .quick-links{
+        width: 90%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 5px;
+        padding-bottom: 20px;
+       
+        .quick-links_pageNav{    
+           margin-left: 20px;
+        }
+        .quick-links_otherLinks{
+            margin-left: 20px;
+        }
+        .quick-links_moreLinks{
+            margin-left: 20px;
+        }
+    }
 }
