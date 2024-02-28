@@ -167,21 +167,17 @@ footer{
         color: var(--accent-brown);
     }
     .quick-links{
-        width: 90%;
-        margin: auto;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        column-gap: 5px;
         padding-bottom: 20px;
-       
         .quick-links_pageNav{    
-           margin-left: 20px;
+
         }
         .quick-links_otherLinks{
-            margin-left: 20px;
+            
         }
         .quick-links_moreLinks{
-            margin-left: 20px;
+            
         }
     }
 }
