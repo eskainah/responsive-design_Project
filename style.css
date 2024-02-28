@@ -250,15 +250,6 @@ footer{
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         padding-bottom: 20px;
-        .quick-links_pageNav{    
-
-        }
-        .quick-links_otherLinks{
-            
-        }
-        .quick-links_moreLinks{
-            
-        }
     }
 }
 
