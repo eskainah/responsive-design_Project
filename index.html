@@ -9,22 +9,29 @@
 <body>
 
     <header> 
-        <nav>
-            <div class="nav container">
+        <div class="header"> 
+            <div class="container row">
+                <button class="nav-toggle" aria-label="open navigation">
+                    <span class="hamburger"></span>
+                </button>
                 <a class="logo" href="#">
-                    <img src="./logo.svg" alt="Conquering responsive Layouts">
+                    <img src="logo.svg" alt="conquering responsive layouts">
                 </a>
-                <ul class="link">
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Contact</li>
-                    <li>Sign In</li>
-                    <li><button class="btn">Sign Up</button></li>
-                </ul>
+                <nav class="nav">
+                    <ul class="nav__list nav__list--primary">
+                        <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
+                        <li class="nav__item"><a href="#" class="nav__link">About</a></li>
+                        <li class="nav__item"><a href="#" class="nav__link">Contact</a></li>
+                    </ul>
+                    <ul class="nav__list nav__list--secondary">
+                        <li class="nav__item"><a href="#" class="nav__link">Sign In</a></li>
+                        <li class="nav__item"><a href="#" class="nav__link nav__link--button">Sign up</a></li>
+                    </ul>
+                </nav>
             </div>
-        </nav>
-    
-        <section class=" hero container">
+        </div>
+        
+        <section class="hero">
             <h1 class="hero-header">
                 Responsive layouts <span>don't have to be a struggle</span>
             </h1>
@@ -175,5 +182,13 @@
        </div>
     </footer>
 
+    <script>
+        const navToggle = document.querySelector('.nav-toggle');
+        const nav = document.querySelector('.nav');
+        
+        navToggle.addEventListener('click', () => {
+        nav.classList.toggle('nav--visible');
+        })
+    </script>
 </body>
 </html>
