@@ -181,3 +181,14 @@ footer{
         }
     }
 }
+
+@media (min-width: 960px) {
+   .sidebar-grid{
+        display: flex;
+        flex-direction: row;
+        align-content: space-between;
+        article{
+            margin: 10px;
+        }
+    }
+}
