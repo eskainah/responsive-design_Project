@@ -192,3 +192,40 @@ footer{
         }
     }
 }
+@media (min-width: 1200px) {
+    .container{
+        max-width: 1200px;
+    }
+/* nav section starts here */
+.nav{   
+    display: flex;
+    flex-direction: row;
+    background-color: hsl(200, 25%, 5%);
+    font-size: 1.2rem;
+    color: var(--accent-text-light);
+}   
+.link{
+    display: flex;
+    flex-direction: row;
+    padding: 10px 0 0 0;
+    font-weight: 500;
+    li{
+        padding: 1px;
+    }
+    .btn{
+        width: 130px;
+        font-size: 1.2rem;
+        padding-top: 3px;
+    }
+}
+.logo{
+    padding: 5px;
+    img{
+        width: 12%;
+        margin-top: 5px;
+    }
+}
+.sidebar-grid{
+    background-color: rgb(0, 38, 255);
+    }
+ }
